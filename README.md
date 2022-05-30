@@ -1,4 +1,6 @@
-# varint
+# fast varint
+
+This is a fork of https://github.com/chrisdickinson/varint with a faster decoder
 
 encode whole numbers to an array of [protobuf-style varint bytes](https://developers.google.com/protocol-buffers/docs/encoding#varints) and also decode them.
 
