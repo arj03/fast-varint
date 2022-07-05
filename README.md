@@ -1,20 +1,20 @@
 # fast varint
 
-This is a fork of https://github.com/chrisdickinson/varint with a faster decoder (10x faster on int32)
+This is a fork of https://github.com/chrisdickinson/varint with a faster decoder (10x faster on int32), available on npm as fast-varint.
 
 encode whole numbers to an array of [protobuf-style varint bytes](https://developers.google.com/protocol-buffers/docs/encoding#varints) and also decode them.
 
 ```javascript
-var varint = require('varint')
+const varint = require('fast-varint')
 
-var bytes = varint.encode(300) // === [0xAC, 0x02]
+const bytes = varint.encode(300) // === [0xAC, 0x02]
 varint.decode(bytes) // 300
 varint.decode.bytes // 2 (the last decode() call required 2 bytes)
 ```
 
 ## api
 
-### varint = require('varint')
+### varint = require('fast-varint')
 
 ### varint.encode(num[, buffer=[], offset=0]) -> buffer
 
